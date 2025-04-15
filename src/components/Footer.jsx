@@ -13,7 +13,7 @@ const Footer = () => {
           <p>Reparación de celulares y venta de accesorios.</p>
           <p>Dirección: Ayacucho 6086, Rosario, Argentina</p>
           <p>Teléfono: 3413651212</p>
-          <p>Email: contacto@marianoreparaciones.com</p>
+          <p>Email: mariano.lopez.nicolas@gmail.com</p>
         </div>
 
         {/* Enlaces de navegación */}
