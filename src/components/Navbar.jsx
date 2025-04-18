@@ -35,7 +35,12 @@ const Navbar = () => {
     return () => clearTimeout(timeout);
   }, [clicks, navigate]);
 
-  // Manejo de apertura y cierre del menú hamburguesa
+  // Cerrar menú al hacer clic en un link del menú
+  const handleLinkClick = () => {
+    setMenuOpen(false);
+  };
+
+  // Toggle del menú hamburguesa
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
@@ -45,20 +50,20 @@ const Navbar = () => {
       <div className="navbar-left">
         <Link to="/" onClick={handleSecretClick} className="navbar-title">
           <img
-            src="/mariano-log.jpg" 
+            src="/mariano-log.jpg"
             alt="Mariano Reparaciones"
             className="navbar-logo"
           />
         </Link>
         <ul className={`navbar-links ${menuOpen ? "active" : ""}`}>
           <li>
-            <Link to="/">Inicio</Link>
+            <Link to="/" onClick={handleLinkClick}>Inicio</Link>
           </li>
           <li>
-            <Link to="/sobremi">Sobre nosotros</Link>
+            <Link to="/sobremi" onClick={handleLinkClick}>Sobre nosotros</Link>
           </li>
           <li>
-            <Link to="/contacto">Contacto</Link>
+            <Link to="/contacto" onClick={handleLinkClick}>Contacto</Link>
           </li>
         </ul>
       </div>
@@ -69,7 +74,7 @@ const Navbar = () => {
         <div className="navbar-actions">
           {usuario && (
             <>
-              <Link to="/admin" className="navbar-link">
+              <Link to="/admin" className="navbar-link" onClick={handleLinkClick}>
                 Panel
               </Link>
               <span className="navbar-user">{usuario.displayName}</span>
