@@ -163,6 +163,67 @@
 }
 
 
+.hero-carousel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carousel-images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500%;
+  height: 100%;
+  display: flex;
+  animation: slide 15s infinite ease-in-out;
+}
+
+.carousel-images img {
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.pagina-inicio {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4); /* oscurece un poco para contraste */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.pagina-inicio h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.pagina-inicio p {
+  font-size: 1.3rem;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* Animación del carrusel */
+@keyframes slide {
+  0%   { transform: translateX(0); }
+  20%  { transform: translateX(-100vw); }
+  40%  { transform: translateX(-200vw); }
+  60%  { transform: translateX(-300vw); }
+  80%  { transform: translateX(-400vw); }
+  100% { transform: translateX(0); }
+}
+
    /* pagina sobre mi--------------------------------------------------------------------- */
 .pagina-sobre-mi {
   max-width: 1200px;

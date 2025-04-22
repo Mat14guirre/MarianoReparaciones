@@ -8,7 +8,6 @@ import Login from "./pages/Login";
 import PrivateRoute from "./components/PrivateRoute";
 import Carrito from "./pages/Carrito";
 import Checkout from "./pages/CheckOut.jsx";
-import Inicio from './pages/Inicio';
 import SobreMi from './pages/SobreMi.jsx';
 import Contacto from './pages/Contacto';
 import Footer from './components/Footer.jsx';
@@ -17,11 +16,11 @@ function App() {
   return (
     <Router>
       <Navbar />
+      
       <Routes>
         <Route path="/carrito" element={<Carrito />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/" element={<Products />} />
-        <Route path="/" element={<Inicio />} />
         <Route path="/sobremi" element={<SobreMi />} />
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/login" element={<Login />} />
