@@ -11,6 +11,7 @@ import Checkout from "./pages/CheckOut.jsx";
 import SobreMi from './pages/SobreMi.jsx';
 import Contacto from './pages/Contacto';
 import Footer from './components/Footer.jsx';
+import ProductDetail from "./components/Productdetail.jsx";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/sobremi" element={<SobreMi />} />
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/producto/:id" element={<ProductDetail />} />
         
         {/* Rutas protegidas */}
         <Route

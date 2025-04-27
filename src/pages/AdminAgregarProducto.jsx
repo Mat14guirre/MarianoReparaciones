@@ -8,6 +8,7 @@ const AdminAgregarProducto = () => {
     precio: "",
     categoria: "",
     imagen: "",
+    descripcion: "", // Nuevo campo para la descripción
   });
 
   const [mensaje, setMensaje] = useState("");
@@ -24,10 +25,10 @@ const AdminAgregarProducto = () => {
     try {
       await addDoc(collection(db, "productos"), {
         ...producto,
-        precio: Number(producto.precio),
+        precio: Number(producto.precio), // Aseguramos que el precio sea un número
       });
       setMensaje("✅ Producto agregado correctamente");
-      setProducto({ nombre: "", precio: "", categoria: "", imagen: "" });
+      setProducto({ nombre: "", precio: "", categoria: "", imagen: "", descripcion: "" }); // Limpiar el formulario
     } catch (error) {
       console.error("Error al agregar producto:", error);
       setMensaje("❌ Error al agregar producto");
@@ -59,7 +60,7 @@ const AdminAgregarProducto = () => {
         <input
           type="text"
           name="categoria"
-          placeholder="Categoría (ej: accesorios, reparacion)"
+          placeholder="Categoría (ej: accesorios, reparación)"
           value={producto.categoria}
           onChange={handleChange}
           required
@@ -74,6 +75,14 @@ const AdminAgregarProducto = () => {
           required
           className="admin-input"
         />
+        <textarea
+          name="descripcion"
+          placeholder="Descripción del producto"
+          value={producto.descripcion}
+          onChange={handleChange}
+          required
+          className="admin-input"
+        ></textarea>
         <button type="submit" className="admin-btn">
           Agregar
         </button>

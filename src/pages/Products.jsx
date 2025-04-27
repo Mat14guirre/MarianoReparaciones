@@ -2,8 +2,11 @@ import { useState } from "react";
 import useProductos from "../hooks/useProducts.js";
 import { useCart } from "../hooks/useCart.js";
 import "../App.css"; // Importamos los estilos
+import { useNavigate } from "react-router-dom";
 
 const Products = () => {
+  const navigate = useNavigate();  // Mover useNavigate dentro del componente Products
+
   const { productos, cargando } = useProductos();
   const { addToCart } = useCart();
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("Todos");
@@ -84,6 +87,12 @@ const Products = () => {
                 className="producto-btn"
               >
                 Agregar al carrito
+              </button>
+              <button
+                onClick={() => navigate(`/producto/${producto.id}`)}
+                className="producto-btn ver-detalle-btn"
+              >
+                Ver detalle
               </button>
             </div>
           ))}
