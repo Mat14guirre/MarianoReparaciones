@@ -48,7 +48,6 @@
   text-decoration: none;
   color: white;
   font-weight: 500;
-  padding: 8px 14px;
   border-radius: 6px;
   transition: background-color 0.3s ease;
 }
@@ -83,18 +82,19 @@
 }
 
 .navbar-user {
-  font-size: 0.95rem;
+  font-size: 10px;
   color: #ccc;
 }
 
 /* botón logout */
 .navbar-button {
-  padding: 6px 12px;
+  font-size: 10px;
+  margin: 2px;
+  padding: 5px;
   background-color: #ff4d4d;
   color: white;
   border: none;
   border-radius: 6px;
-  font-weight: 500;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -1243,6 +1243,20 @@
 }
 
 @media (max-width: 768px) {
+
+  .admin-titulo {
+    font-size: 20px;
+    color: #1f2937;
+  }
+  
+  /* Botones del panel */
+  .admin-botones {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  
   .producto-nombre {
     font-size: 15px;
     
