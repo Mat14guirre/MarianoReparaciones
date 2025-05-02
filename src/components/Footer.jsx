@@ -44,7 +44,7 @@ const Footer = () => {
 
         <div className="footer-social">
           <a
-            href="https://wa.me/1234567890"
+            href="https://wa.me/3413651212"
             target="_blank"
             className="social-icon"
           >
