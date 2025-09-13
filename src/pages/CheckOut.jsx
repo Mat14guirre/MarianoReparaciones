@@ -109,6 +109,7 @@ const Checkout = () => {
             <button type="submit" className="checkout-btn">
               Confirmar pedido
             </button>
+            <p>NO PAGUES ANTES! AL CONFIRMAR EL VENDEDOR SE PONDRÁ EN CONTACTO CONTIGO PARA REALIZAR EL PAGO Y COORDINAR EL ENVÍO</p>
           </form>
         </>
       )}
