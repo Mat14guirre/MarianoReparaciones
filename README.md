@@ -1,13 +1,30 @@
-# React + Vite
+# 🛠️ MARIANOREPARACIONES
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+E-commerce desarrollado para un negocio de **reparaciones de celulares y venta de accesorios**.  
+La aplicación permite navegar productos por categorías, gestionar un carrito de compras y cuenta con un panel de administración para agregar o eliminar productos.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📸 Demo
 
-## Expanding the ESLint configuration
+👉https://mariano-reparaciones.vercel.app/
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# MarianoReparaciones
+---
+
+## 🛠️ Tecnologías utilizadas
+
+- ⚛️ React + Vite  
+- 🔥 Firebase (Auth + Firestore)  
+- 🎨 CSS
+- 🧭 React Router  
+
+---
+
+## ✨ Características principales
+
+- 🔐 **Autenticación con Google** (solo correos autorizados para el panel admin).  
+- 🛒 **Carrito de compras**: ver detalle en `/carrito`, eliminar productos, vaciar carrito y mostrar total.  
+- 📂 **Gestión de productos**: agregar y borrar desde el panel de administración.  
+- 📱 **Diseño responsive** pensado para desktop y mobile.  
+- ⚡ **Filtrado por categorías** sin recargar la página.  
+- 🧭 **Acceso oculto al login**: clic 5 veces en el título del navbar.
